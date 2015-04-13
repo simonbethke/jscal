@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <script src="js/lib/require.js"></script>
+    <script src="js/config.js"></script>    
+    <script>    
+      require.config({baseUrl : 'js'});
+      
+      //Uncomment this line to test the minified version
+      //require(['dist/jscal.min']);
+      //
+      require(['sample']);
+    </script>	
+    
+  </head>
+  <body>
+    <button id="perviousButton">Previous</button>
+    <span id="statusLabel"></span>
+    <button id="nextButton">Next</button>
+    
+    <select id="timeZonePicker">
+      <option value="Europe/Berlin">Kiel</option>
+      <option value="America/New_York">New York</option>
+      <option value="localeventtime">Local Event Time</option>
+    </select>
+    <span id="loadingInProgress" style="display:none;">Loading in progress...</span>
+    
+    
+    <div id="calendarCollection" style="width:800px;"><!-- CALENDAR CONTENT --></div>
+  </body>
+</html>

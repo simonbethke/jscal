@@ -1,0 +1,153 @@
+/*
+#calendarCollection > div,
+#calendarCollection > table{
+  height:600px;
+}
+
+td, h3, p{
+  font-family:arial;
+}
+  
+.jscal, .labels{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.labels div{
+  right:5px;
+}
+
+table{
+  border-spacing: 0;
+  border-collapse: colllapse;
+}
+
+table td{
+  padding:0;
+}
+
+.infoArea a{
+  cursor:hand;
+  font-size:10px;
+  color:#0060c0;
+}
+*/
+
+.jscal{
+  position:relative;
+}
+
+.jscal .event{
+  font-family:arial;
+  font-size:9px;
+  font-weight:bold;
+  line-height:1.6em;
+  text-indent:0.2em;
+  cursor: hand;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.jscal .grid{
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+
+.jscal.eventsHorizontal .grid{
+  border-width:1px 0px 0px 1px;
+  border-style:solid;
+  border-color:#555 #ddd #555 #ddd;
+}
+
+.jscal.eventsVertical .grid{
+  border-width:1px 0px 0px 1px;
+  border-style:solid;
+  border-color:#ddd #555 #ddd #555;
+}
+
+.cell{
+  font-family:arial;
+  font-size:10px;
+  color: #555;
+}
+
+.jscal.eventsHorizontal .grid .cell{
+  border-width:0px 1px 1px 0px;
+  border-style:solid;
+  border-color:#555 #ddd #555 #ddd;
+}
+
+.jscal.eventsVertical .grid .cell{
+  border-width:0px 1px 1px 0px;
+  border-style:solid;
+  border-color:#ddd #555 #ddd #555;
+}
+
+.jscal.eventBorders .event{
+  border-style:solid;
+  border-color:rgba(0, 0, 0, 0.1);
+}
+
+.jscal.eventBorders .fullCap{
+  border-width:1px;
+  border-radius:5px;
+  margin:-1px 0 0 -1px;
+}
+.jscal.eventBorders.eventsVertical .startCap{
+  border-width:1px 1px 0 1px;
+  border-radius: 5px 5px 0 0;
+  margin:-1px 0 0 -1px;
+}
+.jscal.eventBorders.eventsVertical .noCap{
+  border-width:0 1px 0 1px;
+  border-radius: 0;
+  margin:0 0 0 -1px;
+}
+.jscal.eventBorders.eventsVertical .endCap{
+  border-width:0 1px 1px 1px;
+  border-radius: 0 0 5px 5px;
+  margin:0 0 0 -1px;
+}
+.jscal.eventBorders.eventsHorizontal .startCap{
+  border-width:1px 0 1px 1px;
+  border-radius: 5px 0 0 5px;
+  margin:-1px 0 0 -1px;
+}
+.jscal.eventBorders.eventsHorizontal .noCap{
+  border-width:1px 0 1px 0 ;
+  border-radius: 0;
+  margin:-1px 0 0 0;
+}
+.jscal.eventBorders.eventsHorizontal .endCap{
+  border-width:1px 1px 1px 0;
+  border-radius: 0 5px 5px 0;
+  margin:-1px 0 0 0;
+}
+
+.jscal * {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.jscal-wrapper .labels.top{
+  height:20px;
+}
+
+.jscal-wrapper .labels.left{
+  width:20px;
+  height:400px;
+  float:left;
+}
+.jscal-wrapper .jscal{
+  width:auto;
+  height:400px;
+}
+.jscal-wrapper .jscal.hasLeftLabels{
+  margin-left:20px;
+}
