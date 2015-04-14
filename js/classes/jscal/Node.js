@@ -16,14 +16,17 @@ define(["class"], function(Class) {
     },
     
     setParent: function(node){
-      if(node == this)
+      if(node == this){
         this.treeSet("parent", null);
+      }
       else{
-        this.treeSet("parent", node);
-        if(node != null)
+        if(node != null){
+          this.treeSet("parent", node);
           this.addChild(this);
-        else
-          this.removeChild(node, true);
+        }
+        else{
+          this.getParent().removeChild(this, true);
+        }
       }
     },
     
@@ -38,7 +41,7 @@ define(["class"], function(Class) {
         node.setParent(this);
     },
     
-    removeChild: function(node, sameInstance){
+    removeChild: function(node, sameObjInstance){
       var children = this.treeGet("children");
       var i = 0;
       if(sameObjInstance) 
